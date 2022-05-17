@@ -1,6 +1,6 @@
 package com.usuario.service.controlador;
 
-import java.util.HashMap;
+
 import java.util.List;
 import java.util.Map;
 
@@ -91,7 +91,7 @@ public class UsuarioControlador extends  Usuario{
 		return ResponseEntity.ok(nuevoCarro);
 	}
 	
-	@PostMapping("/moto/{usuarioId}")
+	@PostMapping("moto/{usuarioId}")
 	public ResponseEntity<Moto> guardaMoto(@PathVariable ("usuarioId") int usuarioId,  @RequestBody Moto moto){
 		Moto nuevaMoto = usuarioServicio.saveMoto(usuarioId, moto);
 		return ResponseEntity.ok(nuevaMoto); 
